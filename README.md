@@ -2,7 +2,7 @@
 
 Node.js MongoDB server.
 
-### Setting up .env:
+### Setting up .env
 ```
 	DB_HOST=<mongodb server host>
 	TOKEN_SECRET=<hash>

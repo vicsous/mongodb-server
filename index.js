@@ -40,6 +40,9 @@ app.use(cors(corsConfig));
 app.options('*', cors(corsConfig));
 
 // Routes
+app.get('/', (req, res) => {
+	return res.status(200).send('Welcome to mongodb-server!');
+})
 app.use('/auth', auth);
 app.use('/logout', logout);
 app.use('/register', register);

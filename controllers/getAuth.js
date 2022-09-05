@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const getAuth = async (req, res) => {
-	throw new Error('Deu ruim');
     const user = await User.findOne({ email: req.body.email.toUpperCase()});
     if (!user) return res.status(404).send('User not found');
     const auth = await bcrypt.compare(req.body.password, user.password);

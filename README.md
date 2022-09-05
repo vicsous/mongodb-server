@@ -13,6 +13,6 @@ Node.js MongoDB server.
 ```
 
 ### Starting
-```
+`
 	npm start
-````
+`

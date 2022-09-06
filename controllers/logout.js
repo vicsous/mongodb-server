@@ -8,7 +8,7 @@ const logout = async (req, res) => {
                 maxAge: new Date(0),
                 path: '/'
             })
-        ).status(200).send('User logged out');
+        ).status(200).json({ message: 'User logged out '})
 }
 
 module.exports = logout

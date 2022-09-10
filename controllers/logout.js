@@ -5,7 +5,7 @@ const logout = async (req, res) => {
             'Set-Cookie',
             cookie.serialize('token', '', {
                 httpOnly: true,
-                maxAge: new Date(0),
+                maxAge: new Date(1),
                 path: '/'
             })
         ).status(200).json({ message: 'User logged out '})

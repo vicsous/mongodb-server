@@ -10,7 +10,7 @@ async function createAdmin () {
 	const dateNow = Math.floor(new Date().getTime() / 1000);
     const newAdmin = { 
 		username: 'ADMIN',
-		email: 'ADMIN@ADMIN',
+		email: 'ADMIN@ADMIN.COM',
 		password: password,
 		roles: [ process.env.ADMIN_CODE, process.env.MOD_CODE, process.env.USER_CODE ],
 		modifiedAt: dateNow,

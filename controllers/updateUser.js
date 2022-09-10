@@ -17,6 +17,7 @@ const updateUser = async (req, res) => {
         const email = await User.find({ email: req.body.email.toUpperCase() });
         if (email[0]) return res.status(200).json({ message: 'Email already in use' });
     }
+    if (req.body.newPassword === '') delete req.body.newPassword;
     req.body.newPassword ? req.body.password = await bcrypt.hash(req.body.newPassword, 10) : delete req.body.password;
     const { status, data } = await updateFile(req.params.username.toUpperCase(), req.body, User);
     return res.status(status).json(data);
